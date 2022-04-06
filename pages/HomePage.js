@@ -4,7 +4,6 @@ import {useState, useEffect} from "react";
 import {getPokemons} from "../utils/PokeAPI";
 
 export default function App(props) {
-
   const {navigation, ...restProps} = props;
 
   const [PokemonList, setPokemonList] = useState([]);

@@ -16,10 +16,13 @@ export default function PokemonThumbnail(props) {
       setPokemonTile(data)
     })
   }
+
   return (
     <TouchableOpacity
     style={styles.container}
-    onPress={() => navigation.navigate('PokemonDetails')}
+    onPress={() => navigation.navigate('PokemonDetails', {
+      pokemonDetails: pokemonTile
+    })}
     >
       <View style={styles.imageContainer}>
         {(pokemonTile.sprites !== undefined) ? (
@@ -76,7 +79,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   list: {
-    textTransform: 'capitalize',
     textAlign: 'center',
     padding: 5
   },
@@ -86,6 +88,7 @@ const styles = StyleSheet.create({
     margin: 'auto'
   },
   text: {
-    textAlign: 'center'
+    textAlign: 'center',
+    textTransform: 'capitalize',
   }
 });
