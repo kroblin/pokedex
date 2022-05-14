@@ -3,7 +3,7 @@ import PokemonThumbnail from "../Components/PokemonThumbnail"
 import {useState, useEffect} from "react";
 import {getPokemons} from "../utils/PokeAPI";
 
-export default function App(props) {
+export default function HomePage(props) {
   const {navigation, ...restProps} = props;
 
   const [PokemonList, setPokemonList] = useState([]);
